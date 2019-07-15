@@ -55,7 +55,9 @@
 </div>
 <script src="utils.js" type="text/javascript"></script>
 <script id="codeSnippet" type="text/code-snippet">
-var callback = function(){
+document.addEventListener("DOMContentLoaded", function(){
+  // Handler when the DOM is fully loaded
+
   let src = cv.imread('imageCanvasInput');
   let templ = cv.imread('templateCanvasInput');
   let dst = new cv.Mat();
@@ -79,23 +81,13 @@ var callback = function(){
 
   let tryIt = document.getElementById('tryIt');
   tryIt.addEventListener('click', () => {
-    utils.executeCode('codeEditor');
+      utils.executeCode('codeEditor');
   });
 
   utils.loadOpenCv(() => {
-    tryIt.removeAttribute('disabled');
+      tryIt.removeAttribute('disabled');
   });
-  // Handler when the DOM is fully loaded
-};
-
-if (
-    document.readyState === "complete" ||
-    (document.readyState !== "loading" && !document.documentElement.doScroll)
-) {
-  callback();
-} else {
-  document.addEventListener("DOMContentLoaded", callback);
-}
+});
 </script>
 </body>
 </html>
