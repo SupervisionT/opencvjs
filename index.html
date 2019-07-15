@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
    cv.rectangle(src, maxPoint, point, color, 2, cv.LINE_8, 0);
    cv.imshow('canvasOutput', src);
    src.delete(); dst.delete(); mask.delete();
+ });
    </script>
    <script type="text/javascript">
    let utils = new Utils('errorMessage');
@@ -86,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function() {
    utils.loadOpenCv(() => {
      tryIt.removeAttribute('disabled');
    });
-});
 </script>
 </body>
 </html>
