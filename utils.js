@@ -101,6 +101,7 @@ function Utils(errorOutputId) { // eslint-disable-line no-unused-vars
             let files = e.target.files;
             if (files.length > 0) {
                 let imgUrl = URL.createObjectURL(files[0]);
+                console.log('imgUrl', imgUrl, 'canvasId', canvasId)
                 self.loadImageToCanvas(imgUrl, canvasId);
             }
         }, false);
