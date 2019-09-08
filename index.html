@@ -77,7 +77,8 @@ document.addEventListener("DOMContentLoaded", function() {
     utils.loadCode('codeSnippet', 'codeEditor');
     utils.loadImageToCanvas('lena.jpg', 'imageCanvasInput');
     utils.loadImageToCanvas('hat.png', 'templateCanvasInput');
-    utils.addFileInputHandler('fileInput', 'canvasInput');
+    utils.addFileInputHandler('fileInput', 'imageCanvasInput');
+    utils.addFileInputHandler('fileInput', 'templateCanvasInput');
 
     let tryIt = document.getElementById('tryIt');
     tryIt.addEventListener('click', () => {
