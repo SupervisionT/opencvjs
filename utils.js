@@ -108,6 +108,19 @@ function Utils(errorOutputId) { // eslint-disable-line no-unused-vars
         }, false);
     };
 
+    this.addFileInputHandler2 = function(fileInputId, canvasId) {
+        let inputElement2 = document.getElementById(fileInputId);
+        inputElement2.addEventListener('change', (e) => {
+            let files = e.target.files;
+            console.log('files', files)
+            if (files.length > 0) {
+                let imgUrl = URL.createObjectURL(files[0]);
+                console.log('imgUrl', imgUrl, 'canvasId', canvasId)
+                self.loadImageToCanvas(imgUrl, canvasId);
+            }
+        }, false);
+    };
+
     function onVideoCanPlay() {
         if (self.onCameraStartedCallback) {
             self.onCameraStartedCallback(self.stream, self.video);
