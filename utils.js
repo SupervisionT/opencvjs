@@ -96,6 +96,7 @@ function Utils(errorOutputId) { // eslint-disable-line no-unused-vars
     };
 
     this.addFileInputHandler = function(fileInputId, canvasId) {
+        console.log('fileInputId', fileInputId, 'canvasId', canvasId)
         let inputElement = document.getElementById(fileInputId);
         inputElement.addEventListener('change', (e) => {
             let files = e.target.files;
