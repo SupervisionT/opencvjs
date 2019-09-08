@@ -72,21 +72,21 @@ document.addEventListener("DOMContentLoaded", function() {
  });
    </script>
    <script type="text/javascript">
-   let utils = new Utils('errorMessage');
+    let utils = new Utils('errorMessage');
 
-   utils.loadCode('codeSnippet', 'codeEditor');
-   utils.loadImageToCanvas('lena.jpg', 'imageCanvasInput');
-   utils.loadImageToCanvas('lenaFace.png', 'templateCanvasInput');
-   utils.addFileInputHandler('fileInput', 'canvasInput');
+    utils.loadCode('codeSnippet', 'codeEditor');
+    utils.loadImageToCanvas('lena.jpg', 'imageCanvasInput');
+    utils.loadImageToCanvas('hat.png', 'templateCanvasInput');
+    utils.addFileInputHandler('fileInput', 'canvasInput');
 
-   let tryIt = document.getElementById('tryIt');
-   tryIt.addEventListener('click', () => {
-     utils.executeCode('codeEditor');
-   });
+    let tryIt = document.getElementById('tryIt');
+    tryIt.addEventListener('click', () => {
+    utils.executeCode('codeEditor');
+    });
 
-   utils.loadOpenCv(() => {
-     tryIt.removeAttribute('disabled');
-   });
+//    utils.loadOpenCv(() => {
+//      tryIt.removeAttribute('disabled');
+//    });
 </script>
 </body>
 </html>
