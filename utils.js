@@ -96,10 +96,10 @@ function Utils(errorOutputId) { // eslint-disable-line no-unused-vars
     };
 
     this.addFileInputHandler = function(fileInputId, canvasId) {
-        console.log('fileInputId', fileInputId, 'canvasId', canvasId)
         let inputElement = document.getElementById(fileInputId);
         inputElement.addEventListener('change', (e) => {
             let files = e.target.files;
+            console.log('files', files)
             if (files.length > 0) {
                 let imgUrl = URL.createObjectURL(files[0]);
                 console.log('imgUrl', imgUrl, 'canvasId', canvasId)
